@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: test-mvp-component-fslg
+  namespace: mvp-demo-dev-namespace-whhp-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio-qe/test-images@sha256:26cdd1283125c21105c0525ef24f22af1cf9bdaa31f1426ae058d58af77edfa9
+        name: hacbs-jvm-build-test-project
+        resources: {}
+status: {}
